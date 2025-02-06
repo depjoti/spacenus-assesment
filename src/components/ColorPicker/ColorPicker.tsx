@@ -1,4 +1,4 @@
-// src/components/ColorPicker/ColorPicker.tsx
+
 import { useState, useRef, useEffect } from "react"
 import styles from "./ColorPicker.module.scss"
 

@@ -27,6 +27,9 @@ import "leaflet/dist/leaflet.css"
 import "leaflet-draw/dist/leaflet.draw.css"
 import styles from "./Map.module.scss"
 
+// Import Leaflet Draw properly
+import "leaflet-draw"
+
 const DrawingControl = () => {
   const map = useMap()
   const dispatch = useDispatch()
@@ -35,13 +38,12 @@ const DrawingControl = () => {
   useEffect(() => {
     if (!map) return
 
-    // Initialize FeatureGroup for editable layers
     const editableLayers = new L.FeatureGroup()
     map.addLayer(editableLayers)
     featureGroupRef.current = editableLayers
 
-    // Initialize draw control
-    const drawControl = new L.Control.Draw({
+    // Initialize draw control after ensuring the plugin is loaded
+    const drawControl = new (L.Control as any).Draw({
       draw: {
         polygon: {
           allowIntersection: false,
@@ -149,7 +151,7 @@ const DrawingControl = () => {
   return null
 }
 
-// Geolocation control component
+// Geolocation control component remains unchanged
 const GeolocationControl = () => {
   const map = useMap()
 
@@ -239,7 +241,6 @@ const MapComponent = () => {
     </div>
   )
 }
-
 
 export default dynamic(() => Promise.resolve(MapComponent), {
   ssr: false,
