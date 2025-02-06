@@ -37,7 +37,7 @@
 // src/components/Map/Map.module.scss
 .mapContainer {
   width: 100%;
-  height: 600px;
+  height: 100%;
   position: relative;
   border-radius: 8px;
   overflow: hidden;
@@ -79,3 +79,48 @@
     }
   }
 }
+// src/components/Map/Map.module.scss
+// .mapContainer {
+//   width: 100%;
+//   height: 600px;
+//   position: relative;
+//   border-radius: 8px;
+//   overflow: hidden;
+//   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+//   .map {
+//     width: 100%;
+//     height: 100%;
+//   }
+
+//   .popup {
+//     padding: 8px;
+//     line-height: 1.5;
+//     font-size: 14px;
+//   }
+
+//   .geolocationControl {
+//     position: absolute;
+//     top: 80px;
+//     right: 10px;
+//     z-index: 1000;
+
+//     button {
+//       width: 34px;
+//       height: 34px;
+//       background: white;
+//       border: 2px solid rgba(0, 0, 0, 0.2);
+//       border-radius: 4px;
+//       cursor: pointer;
+//       font-size: 18px;
+//       padding: 0;
+//       display: flex;
+//       align-items: center;
+//       justify-content: center;
+
+//       &:hover {
+//         background-color: #f4f4f4;
+//       }
+//     }
+//   }
+// }

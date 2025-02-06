@@ -4,7 +4,7 @@ export const calculatePolygonArea = (coordinates: LatLng[]): number => {
   if (coordinates.length < 3) return 0
 
   let area = 0
-  const R = 6371 // Earth's radius in kilometers
+  const R = 6371 
 
   for (let i = 0; i < coordinates.length; i++) {
     const j = (i + 1) % coordinates.length

@@ -1,4 +1,4 @@
-// src/store/slices/polygonSlice.ts
+
 import { createSlice, PayloadAction } from "@reduxjs/toolkit"
 import { PolygonState, Polygon, ValidationError } from "@/types"
 import {

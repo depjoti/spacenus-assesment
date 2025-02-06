@@ -1,4 +1,4 @@
-// src/utils/polygonUtils.ts
+
 import { LatLngTuple } from "leaflet"
 import { Polygon } from "../types/map.types"
 
