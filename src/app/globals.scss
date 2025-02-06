@@ -1,0 +1,127 @@
+// // src/app/globals.scss
+// :root {
+//   --primary-color: #2196f3;
+//   --secondary-color: #1976d2;
+//   --error-color: #ff4444;
+//   --background-color: #f5f5f5;
+//   --text-color: #333;
+//   --border-color: #ddd;
+// }
+
+// * {
+//   box-sizing: border-box;
+//   margin: 0;
+//   padding: 0;
+// }
+
+// body {
+//   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+//     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+//   color: var(--text-color);
+//   background-color: var(--background-color);
+// }
+
+// // src/app/page.module.scss
+// .main {
+//   min-height: 100vh;
+//   display: flex;
+//   flex-direction: column;
+
+//   .header {
+//     padding: 20px;
+//     background-color: white;
+//     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+//     h1 {
+//       margin: 0;
+//       font-size: 24px;
+//       color: var(--text-color);
+//     }
+//   }
+
+//   .content {
+//     flex: 1;
+//     display: flex;
+//     gap: 20px;
+//     padding: 20px;
+
+//     @media (max-width: 768px) {
+//       flex-direction: column;
+//     }
+
+//     .mapSection {
+//       flex: 1;
+//       min-height: 600px;
+//       background-color: white;
+//       border-radius: 8px;
+//       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+//       overflow: hidden;
+//     }
+
+//     .sidebar {
+//       width: 400px;
+
+//       @media (max-width: 768px) {
+//         width: 100%;
+//       }
+//     }
+//   }
+// }
+// src/app/globals.scss
+$primary-color: #2196f3;
+$secondary-color: #1976d2;
+$error-color: #ff4444;
+$background-color: #f5f5f5;
+$text-color: #333;
+$border-color: #ddd;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: $text-color;
+  background-color: $background-color;
+  line-height: 1.5;
+}
+
+// Leaflet specific styles
+.leaflet-draw-toolbar {
+  .leaflet-draw-draw-polygon {
+    background-position: -2px -2px;
+  }
+}
+
+.leaflet-draw-actions {
+  li {
+    a {
+      background-color: white;
+      color: #333;
+      &:hover {
+        background-color: #f4f4f4;
+      }
+    }
+  }
+}
+
+// Override default Leaflet draw styles
+.leaflet-draw-toolbar a {
+  background-color: white;
+  border: 1px solid #ccc;
+  &:hover {
+    background-color: #f4f4f4;
+  }
+}
+
+.leaflet-draw-actions a {
+  color: #333;
+  background-color: white;
+  &:hover {
+    background-color: #f4f4f4;
+    color: #000;
+  }
+}

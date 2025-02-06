@@ -1,0 +1,69 @@
+// src/styles/modules/Layout.module.scss
+@import "../variables";
+
+.layout {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.mapSection {
+  flex: 1;
+  position: relative;
+  transition: width 0.3s ease;
+
+  &.expanded {
+    width: 100%;
+  }
+}
+
+.sidebar {
+  width: 400px;
+  height: 100%;
+  background-color: white;
+  transition: transform 0.3s ease;
+  border-left: 1px solid $border-color;
+  overflow-y: auto;
+
+  @include dark-mode {
+    background-color: $dark-bg-secondary;
+    border-color: $dark-border-color;
+  }
+
+  &.hidden {
+    transform: translateX(100%);
+  }
+}
+
+.toggleButton {
+  position: absolute;
+  top: 50%;
+  right: -20px;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 40px;
+  background-color: white;
+  border: 1px solid $border-color;
+  border-right: none;
+  border-radius: $border-radius-md 0 0 $border-radius-md;
+  cursor: pointer;
+  z-index: $z-index-fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @include dark-mode {
+    background-color: $dark-bg-secondary;
+    border-color: $dark-border-color;
+    color: $dark-text-primary;
+  }
+
+  &:hover {
+    background-color: darken(white, 5%);
+
+    @include dark-mode {
+      background-color: lighten($dark-bg-secondary, 5%);
+    }
+  }
+}
